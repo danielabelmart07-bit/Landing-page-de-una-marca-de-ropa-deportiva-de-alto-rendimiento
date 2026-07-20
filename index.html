@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Performance - Ropa Deportiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "tertiary-container": "#1a1a1a",
+                            "outline-variant": "#444748",
+                            "on-tertiary": "#303030",
+                            "surface-variant": "#333535",
+                            "secondary-fixed": "#c3f400",
+                            "inverse-on-surface": "#2f3131",
+                            "on-error": "#690005",
+                            "surface-tint": "#c8c6c5",
+                            "inverse-primary": "#5f5e5e",
+                            "primary-container": "#1a1a1a",
+                            "on-secondary-fixed": "#161e00",
+                            "on-surface": "#e2e2e2",
+                            "surface": "#121414",
+                            "on-primary": "#313030",
+                            "on-error-container": "#ffdad6",
+                            "on-tertiary-container": "#848282",
+                            "inverse-surface": "#e2e2e2",
+                            "tertiary-fixed-dim": "#c8c6c5",
+                            "on-surface-variant": "#c4c7c7",
+                            "on-secondary": "#283500",
+                            "on-primary-fixed-variant": "#474746",
+                            "primary-fixed-dim": "#c8c6c5",
+                            "background": "#121414",
+                            "surface-bright": "#38393a",
+                            "error": "#ffb4ab",
+                            "error-container": "#93000a",
+                            "outline": "#8e9192",
+                            "on-primary-container": "#848282",
+                            "secondary-fixed-dim": "#abd600",
+                            "on-tertiary-fixed-variant": "#474746",
+                            "on-tertiary-fixed": "#1b1c1c",
+                            "surface-container-highest": "#333535",
+                            "primary-fixed": "#e5e2e1",
+                            "surface-container-high": "#282a2b",
+                            "on-secondary-fixed-variant": "#3c4d00",
+                            "on-secondary-container": "#556d00",
+                            "tertiary": "#c8c6c5",
+                            "on-background": "#e2e2e2",
+                            "secondary-container": "#c3f400",
+                            "secondary": "#ffffff",
+                            "surface-container-lowest": "#0c0f0f",
+                            "surface-container": "#1e2020",
+                            "on-primary-fixed": "#1c1b1b",
+                            "primary": "#c8c6c5",
+                            "surface-container-low": "#1a1c1c",
+                            "tertiary-fixed": "#e4e2e1",
+                            "surface-dim": "#121414"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "section-gap": "120px",
+                            "margin-mobile": "16px",
+                            "gutter": "24px",
+                            "unit": "4px",
+                            "margin-desktop": "64px"
+                        },
+                        "fontFamily": {
+                            "headline-lg": ["Anybody"],
+                            "display-lg": ["Anybody"],
+                            "headline-md": ["Anybody"],
+                            "display-lg-mobile": ["Anybody"],
+                            "label-bold": ["Hanken Grotesk"],
+                            "label-sm": ["Hanken Grotesk"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"]
+                        },
+                        "fontSize": {
+                            "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                            "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "headline-md": ["32px", {"lineHeight": "38px", "fontWeight": "700"}],
+                            "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                            "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                            "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+    <!-- Header / TopNavBar -->
+    <header class="fixed top-0 w-full z-50 border-b border-outline-variant/30 bg-surface/90 backdrop-blur-md">
+        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 w-full max-w-[1440px] mx-auto">
+            <div class="flex items-center gap-4">
+                <span class="font-display-lg text-headline-md font-black italic text-secondary leading-none">APEX PERFORMANCE</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+                <a href="#inicio" class="text-on-surface hover:text-secondary-fixed font-label-bold text-label-bold uppercase tracking-widest transition-colors">Inicio</a>
+                <a href="#hombre" class="text-on-surface hover:text-secondary-fixed font-label-bold text-label-bold uppercase tracking-widest transition-colors">Hombre</a>
+                <a href="#mujer" class="text-on-surface hover:text-secondary-fixed font-label-bold text-label-bold uppercase tracking-widest transition-colors">Mujer</a>
+                <a href="#accesorios" class="text-on-surface hover:text-secondary-fixed font-label-bold text-label-bold uppercase tracking-widest transition-colors">Accesorios</a>
+                <a href="#ofertas" class="text-on-surface hover:text-secondary-fixed font-label-bold text-label-bold uppercase tracking-widest transition-colors">Ofertas</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <button class="bg-secondary-fixed text-black font-bold rounded-lg px-6 py-2 font-label-bold text-label-bold uppercase tracking-widest transition-all duration-300 hover:scale-105 active:scale-95">
+                    Comprar ahora
+                </button>
+                <button class="md:hidden text-secondary" aria-label="Abrir menú de navegación">
+                    <span class="material-symbols-outlined text-[32px]" aria-hidden="true">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="inicio">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden pt-20" aria-label="Sección de presentación">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center opacity-50" role="img" aria-label="Atletas profesionales corriendo en una pista urbana nocturna con detalles de ropa neón" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaNuI3e7utPHqcg5tFrmBQ4B1AlsFBe86kH7j1eC08BUwJuskC9v0H-Qm_xBBJciSsouc1AkYXvgS6zocAo5PLEdzKyLBvdHnnvbkn7-UNtFBWBBsJHrYDDh5T4T8SvRcmzzx5z5zEdQa_ZsebrbgHTf83YByYdxb9F5qzEsI4nIJESy1mOGNjkTh72Zur6BY2A96KzvzCcVp3vW71-OK4NcCRI8fY42iBfCX_ed7lyDDVYRXZKq9iQQ')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+            </div>
+            <div class="relative z-10 px-4 md:px-margin-desktop w-full max-w-[1440px] mx-auto">
+                <div class="max-w-4xl">
+                    <span class="inline-block px-3 py-1 bg-tertiary-container border border-secondary-fixed text-secondary-fixed font-label-bold text-label-sm uppercase tracking-[0.2em] mb-6">
+                        Performance Gear
+                    </span>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 uppercase italic">
+                        SUPERA TUS <br> <span class="text-secondary-fixed">LÍMITES</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl leading-relaxed">
+                        Equipamiento de alto rendimiento para atletas que no se detienen. Diseñado para la velocidad, la durabilidad y el máximo confort en cada kilómetro.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-secondary-fixed text-black font-bold rounded-lg px-10 py-5 font-label-bold text-label-bold uppercase tracking-widest transition-all duration-300 group flex items-center justify-center gap-3 hover:scale-105 active:scale-95">
+                            Explorar Colección
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
+                        </button>
+                        <button class="border border-secondary-fixed text-secondary-fixed px-10 py-5 font-label-bold text-label-bold uppercase tracking-widest hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all">
+                            Ver Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute right-0 bottom-1/4 hidden lg:block overflow-hidden h-[400px]" aria-hidden="true">
+                <span class="text-stroke font-display-lg text-[120px] font-black uppercase rotate-90 origin-right tracking-tighter opacity-10">SPEED STRENGTH POWER</span>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 md:py-24 bg-surface-container-lowest border-y border-outline-variant/20" aria-label="Beneficios de Apex">
+            <div class="px-4 md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left group">
+                        <div class="w-16 h-16 flex items-center justify-center bg-surface-container-high border border-outline-variant mb-6 group-hover:border-secondary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-secondary-fixed text-4xl" aria-hidden="true">verified</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md mb-2 uppercase italic">Calidad Premium</h2>
+                        <p class="text-on-surface-variant font-body-md">Durabilidad garantizada bajo las condiciones más extremas de entrenamiento.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left group">
+                        <div class="w-16 h-16 flex items-center justify-center bg-surface-container-high border border-outline-variant mb-6 group-hover:border-secondary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-secondary-fixed text-4xl" aria-hidden="true">bolt</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md mb-2 uppercase italic">Envíos Rápidos</h2>
+                        <p class="text-on-surface-variant font-body-md">Tu equipamiento en casa en 24/48 horas para que nada detenga tu progreso.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left group">
+                        <div class="w-16 h-16 flex items-center justify-center bg-surface-container-high border border-outline-variant mb-6 group-hover:border-secondary-fixed transition-colors">
+                            <span class="material-symbols-outlined text-secondary-fixed text-4xl" aria-hidden="true">restart_alt</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md mb-2 uppercase italic">Devoluciones Fáciles</h2>
+                        <p class="text-on-surface-variant font-body-md">Sin preguntas. Tienes 30 días para probar y devolver si no estás satisfecho.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="py-section-gap" aria-labelledby="productos-heading">
+            <div class="px-4 md:px-margin-desktop max-w-[1440px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h2 id="productos-heading" class="font-display-lg text-headline-lg-mobile md:text-headline-lg uppercase italic mb-4">Productos Destacados</h2>
+                        <div class="h-1 w-32 bg-secondary-fixed" aria-hidden="true"></div>
+                    </div>
+                    <a class="group font-label-bold text-label-bold text-secondary-fixed uppercase tracking-widest flex items-center gap-2" href="#">
+                        Ver todo el catálogo <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" aria-hidden="true">chevron_right</span>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Product Card 1 -->
+                    <article class="group bg-surface-container-low border border-outline-variant p-4 transition-all hover:bg-surface-container hover:border-secondary-fixed">
+                        <div class="relative overflow-hidden aspect-square mb-6">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" role="img" aria-label="Zapatillas Apex Runner de color amarillo neón y gris" style="background-image: url('img/zapatilla.png')"></div>
+                            <span class="absolute top-4 left-4 bg-secondary-fixed text-black px-3 py-1 font-label-bold text-label-sm uppercase tracking-widest">Novedad</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md uppercase italic text-secondary">Zapatillas Apex Runner</h3>
+                            <span class="font-display-lg text-headline-md text-secondary-fixed">$129</span>
+                        </div>
+                        <p class="text-on-surface-variant font-body-md mb-8">Tracción superior y retorno de energía optimizado para maratones.</p>
+                        <button class="w-full bg-secondary-fixed text-black font-bold rounded-lg py-4 font-label-bold text-label-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="group bg-surface-container-low border border-outline-variant p-4 transition-all hover:bg-surface-container hover:border-secondary-fixed">
+                        <div class="relative overflow-hidden aspect-square mb-6">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" role="img" aria-label="Camiseta Kinetic Tech gris con ventilación reflectante" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCG8jhK9SGQHaImSn8VTLeqe-6JegN7dbFD9ag6Hfqq9Dkq7AY1HR_x_oWybl7EB1e4kGZLnfk6cxRwcd2cCAJsN1zI4-5xn_P7HQ5qmBikOEu_LeoyEAxqZGtBD_J0FBg7MNVrydpY-EeN025yVLN8oS02fzebEmDt0Q0D5_2tDrl9rG2BrtWJJRoTGyVfsmFNp0BUUbxLpwpoDg7LlZBsJmu0zPkAcgcLkBUZUjeCQPXyRNhXypIhWw')"></div>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md uppercase italic text-secondary">Camiseta Kinetic Tech</h3>
+                            <span class="font-display-lg text-headline-md text-secondary-fixed">$45</span>
+                        </div>
+                        <p class="text-on-surface-variant font-body-md mb-8">Tejido transpirable de secado ultra-rápido para entrenamientos intensos.</p>
+                        <button class="w-full bg-secondary-fixed text-black font-bold rounded-lg py-4 font-label-bold text-label-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="group bg-surface-container-low border border-outline-variant p-4 transition-all hover:bg-surface-container hover:border-secondary-fixed">
+                        <div class="relative overflow-hidden aspect-square mb-6">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" role="img" aria-label="Shorts de Compresión Pro color negro" style="background-image: url('img/canzoncillos.png')"></div>
+                            <span class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 font-label-bold text-label-sm uppercase tracking-widest">Advanced</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-headline-md text-headline-md uppercase italic text-secondary">Shorts de Compresión Pro</h3>
+                            <span class="font-display-lg text-headline-md text-secondary-fixed">$38</span>
+                        </div>
+                        <p class="text-on-surface-variant font-body-md mb-8">Soporte muscular avanzado y libertad total de movimiento.</p>
+                        <button class="w-full bg-secondary-fixed text-black font-bold rounded-lg py-4 font-label-bold text-label-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+                            Agregar al carrito
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="relative py-24 overflow-hidden" aria-labelledby="cta-heading">
+            <div class="absolute inset-0 bg-secondary-fixed"></div>
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none" aria-hidden="true">
+                <span class="font-display-lg text-[25vw] font-black text-black select-none whitespace-nowrap">GO HARDER</span>
+            </div>
+            <div class="relative z-10 px-4 md:px-margin-desktop max-w-[1440px] mx-auto text-center">
+                <h2 id="cta-heading" class="font-display-lg text-headline-lg-mobile md:text-display-lg text-black uppercase italic mb-8">¿Listo para el siguiente nivel?</h2>
+                <p class="font-body-lg text-black max-w-2xl mx-auto mb-10 text-xl font-bold">Únete a la élite de atletas que confían en APEX para romper sus récords personales.</p>
+                <button class="bg-black text-secondary-fixed px-12 py-6 font-label-bold text-label-bold uppercase tracking-widest hover:bg-gray-900 transition-all text-lg shadow-2xl active:scale-95">
+                    Suscribirse al boletín
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/30">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-4 md:px-margin-desktop py-16 max-w-[1440px] mx-auto">
+            <div class="md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="font-display-lg text-headline-md font-black italic text-secondary">APEX</span>
+                </div>
+                <p class="text-on-surface-variant font-body-md mb-6 max-w-xs">
+                    Innovación tecnológica y diseño de vanguardia para atletas de alto rendimiento. Superando límites desde 2024.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-secondary-fixed hover:text-secondary-fixed transition-all" href="#" aria-label="Visitar nuestra web global">
+                        <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                    </a>
+                    <a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-secondary-fixed hover:text-secondary-fixed transition-all" href="#" aria-label="Contactar por correo electrónico">
+                        <span class="material-symbols-outlined" aria-hidden="true">alternate_email</span>
+                    </a>
+                    <a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-secondary-fixed hover:text-secondary-fixed transition-all" href="#" aria-label="Compartir esta página">
+                        <span class="material-symbols-outlined" aria-hidden="true">share</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-1">
+                <h2 class="font-label-bold text-label-bold uppercase tracking-widest text-secondary mb-6 text-sm">Categorías</h2>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Hombre</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Mujer</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Accesorios</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Ofertas</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-1">
+                <h2 class="font-label-bold text-label-bold uppercase tracking-widest text-secondary mb-6 text-sm">Información</h2>
+                <ul class="space-y-4">
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Privacidad</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Términos</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Contacto</a></li>
+                    <li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Envíos</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-1">
+                <h2 class="font-label-bold text-label-bold uppercase tracking-widest text-secondary mb-6 text-sm">Contacto</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-secondary-fixed" aria-hidden="true">mail</span>
+                        performance@apex.com
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-secondary-fixed" aria-hidden="true">phone</span>
+                        +34 900 800 700
+                    </li>
+                    <li class="flex items-center gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-secondary-fixed" aria-hidden="true">location_on</span>
+                        Avenida de la Velocidad 42, Madrid
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/30 py-8 px-4 md:px-margin-desktop text-center">
+            <p class="text-on-surface-variant font-body-md text-sm tracking-widest">
+                © 2024 APEX PERFORMANCE. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            button.addEventListener('mouseup', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-surface/100');
+                header.classList.remove('bg-surface/90');
+            } else {
+                header.classList.add('bg-surface/90');
+                header.classList.remove('bg-surface/100');
+            }
+        });
+    </script>
+</body>
+</html>
